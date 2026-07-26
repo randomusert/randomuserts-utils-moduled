@@ -9,7 +9,7 @@ pluginManagement {
 
 rootProject.name = 'randomuserts-utils'
 
-include 'randomuserts-utils-core'
-include 'randomuserts-utils-fabric'
+include 'core'
+include 'fabric'
 //include 'randomuserts-utils-machines'
 //include 'randomuserts-utils-compat'

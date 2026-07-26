@@ -1,5 +1,15 @@
+# Gradle stuff and Binaries built by gradle
 .gradle/
 build/
+
+# We make sure to exclude most of the JAR files
 *.jar
+
+# We need this as it is part of the gradle wrapper
 !gradle-wrapper.jar
+
+# Client / Server generated run config
 run/
+
+## IDE files
+.idea/
