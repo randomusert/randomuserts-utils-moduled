@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "randomuserts-utils",
-	"version": "${version}",
+	"version": "${mod_version}",
 	"name": "Randomusert's utils",
 	"description": "Utils from Randomusert. Provides all kinds of stuff like more items, QOL recipes and much much more.",
 	"authors": [
@@ -15,7 +15,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.github.randomusert.mods.randomuserts_utils.RandomusertsUtils"
+			"io.github.randomusert.mods.randomuserts_utils.fabric.RandomusertsUtils"
 		]
 	},
 	"depends": {

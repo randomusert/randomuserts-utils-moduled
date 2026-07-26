@@ -1,13 +1,22 @@
 package io.github.randomusert.mods.randomuserts_utils.fabric;
 
+import io.github.randomusert.mods.randomuserts_utils.api.LoggingHelper;
+import io.github.randomusert.mods.randomuserts_utils.api.plugins.RandomusertsUtilsPlugin;
+
 
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.Identifier;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class RandomusertsUtils implements ModIntializer {
+import java.util.List;
+
+
+
+public class RandomusertsUtils implements ModInitializer {
     public static final String MOD_ID = "rsts-utils";
 
 	// This logger is used to write text to the console and the log file.
@@ -15,8 +24,8 @@ public class RandomusertsUtils implements ModIntializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	List<RstsUtilsPlugin> plugins = FabricLoader.getInstance()
-			.getEntrypoints("rsts_utils_plugin", RstsUtilsPlugin.class);
+	List<RandomusertsUtilsPlugin> plugins = FabricLoader.getInstance()
+			.getEntrypoints("rsts_utils_plugin", RandomusertsUtilsPlugin.class);
 
 	@Override
 	public void onInitialize() {
