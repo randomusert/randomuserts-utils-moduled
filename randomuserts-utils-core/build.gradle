@@ -1,0 +1,58 @@
+plugins {
+    id "com.vanniktech.maven.publish" version "0.37.0"
+}
+
+architectury {
+    common rootProject.enabled_platforms.split(',')
+}
+
+dependencies {
+	// We depend on Fabric Loader here to use the Fabric @Environment annotations,
+    // which get remapped to the correct annotations on each platform.
+    implementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+}
+
+import com.vanniktech.maven.publish.JavadocJar
+import com.vanniktech.maven.publish.SourcesJar
+
+mavenPublishing {
+	configureBasedOnAppliedPlugins(
+			new JavadocJar.Empty(),
+			new SourcesJar.Sources()
+	)
+
+	publishToMavenCentral()
+
+	signAllPublications()
+
+
+
+
+	coordinates("io.github.randomusert.mods.randomuserts_utils" , "randomuserts_utils_core", "0.1-SNAPSHOT")
+
+	pom {
+		name = "Randomusert's Utilities Core Mod"
+		description = "CORE: Utils from Randomusert. Provides all kinds of stuff like more items, QOL recipes and much much more."
+		inceptionYear = "2026"
+		url = "https://github.com/randomusert/randomuserts-utils"
+		licenses {
+			license {
+				name = "MIT license"
+				url = "https://opensource.org/license/mit"
+				distribution = "https://opensource.org/license/mit"
+			}
+		}
+		developers {
+			developer {
+				id = "randomusert"
+				name = "Randomusert"
+				url = "https://github.com/randomusert/"
+			}
+		}
+		scm {
+			url = "https://github.com/randomusert/randomuserts-utils/"
+			connection = "scm:git:git://github.com/randomusert/randomuserts-utils.git"
+			developerConnection = "scm:git:ssh://git@github.com/randomusert/randomuserts-utils.git"
+		}
+	}
+}
