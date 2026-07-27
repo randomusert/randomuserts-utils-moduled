@@ -6,7 +6,7 @@ import net.fabricmc.api.ModInitializer;
 public class RandomusertsUtilsCompat implements ModInitializer {
 
 
-    public static String MOD_ID = "data/randomuserts-utils-compat";
+    public static String MOD_ID = "randomuserts-utils-compat";
 
     @Override
     public void onInitialize() {

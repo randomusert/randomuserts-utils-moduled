@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "id": "randomuserts-utils-compat",
   "version": "${mod_version}",
-  "name": "Randomusert's utils",
-  "description": "Utils from Randomusert. Provides all kinds of stuff like more items, QOL recipes and much much more.",
+  "name": "Randomusert's utils Compat",
+  "description": "Compat between Randomusert's Utils and few mods",
   "authors": [
     "Randomusert"
   ],
