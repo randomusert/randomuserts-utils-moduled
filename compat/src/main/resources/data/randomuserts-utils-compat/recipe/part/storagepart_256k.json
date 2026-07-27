@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": "refinedstorage:advanced_processor",
+
+    "G": "refinedstorage:64k_storage_part",
+
+    "I": "refinedstorage:quartz_enriched_iron",
+    "R":  "minecraft:redstone"
+
+  },
+  "pattern": [
+    "DID",
+    "GRG",
+    "DGD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "randomuserts-utils-compat:storagepart_256k"
+  }
+}

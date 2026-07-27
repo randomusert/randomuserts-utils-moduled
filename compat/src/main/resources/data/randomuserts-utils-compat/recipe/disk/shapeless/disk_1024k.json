@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "refinedstorage:storage_housing",
+    "#refinedstorage:parts/items/1024k"
+  ],
+  "result": {
+    "count": 1,
+    "id": "randomuserts-utils-compat:disk_1024k"
+  }
+}
