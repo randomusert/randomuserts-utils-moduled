@@ -8,8 +8,7 @@
 		"Randomusert"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/randomusert/randomuserts-utils-moduled"
 	},
 	"license": "MIT",
 	"environment": "*",
@@ -23,5 +22,15 @@
 		"minecraft": "~26.1.2",
 		"java": ">=25",
 		"fabric-api": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"parent": {
+				"id": "randomuserts-utils-modules",
+				"name": "Randomusert's Utils Modules",
+				"description": "All of the Randomusert's Utils modules"
+			},
+			"update_checker": false
+		}
 	}
 }
