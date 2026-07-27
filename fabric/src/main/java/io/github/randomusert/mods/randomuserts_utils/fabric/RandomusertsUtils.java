@@ -31,6 +31,14 @@ public class RandomusertsUtils implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
 		LoggingHelper.info("Test from the Randomusert's Utils API");
+
+		LOGGER.debug("Loading {} Randomusert's Utils plugin entrypoints", plugins.size());
+
+		plugins.forEach(plugin -> {
+			plugin.initialize();
+		});
+
+		LoggingHelper.info("Randomusert's Utils loaded");
 	}
 
 	public static Identifier id(String path) {

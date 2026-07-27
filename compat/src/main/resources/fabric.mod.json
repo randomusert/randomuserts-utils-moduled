@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "randomuserts-utils-compat",
+  "version": "${mod_version}",
+  "name": "Randomusert's utils",
+  "description": "Utils from Randomusert. Provides all kinds of stuff like more items, QOL recipes and much much more.",
+  "authors": [
+    "Randomusert"
+  ],
+  "contact": {
+    "sources": "https://github.com/randomusert/randomuserts-utils-moduled"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.randomusert.mods.randomuserts_utils.compat.RandomusertsUtilsCompat"
+    ],
+    "rsts_utils_plugin": [
+      "io.github.randomusert.mods.randomuserts_utils.compat.RandomusertsUtilsCompatInit"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.1.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": {
+        "id": "randomuserts-utils-modules",
+        "name": "Randomusert's Utils Modules",
+        "description": "All of the Randomusert's Utils modules"
+      },
+      "update_checker": false
+    }
+  }
+}

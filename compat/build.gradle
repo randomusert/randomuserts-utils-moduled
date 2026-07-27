@@ -1,0 +1,38 @@
+architectury {
+    platformSetupLoomIde()
+    fabric()
+}
+
+configurations {
+    common
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+    developmentFabric.extendsFrom common
+}
+
+
+repositories {
+    maven {
+        name = "Terraformers"
+        url = "https://maven.terraformersmc.com/"
+    }
+}
+
+dependencies {
+    implementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+
+    implementation "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_api_version"
+
+    implementation("com.terraformersmc:modmenu:18.0.0")
+
+    common(project(path: ':core')) { transitive false }
+}
+
+
+processResources {
+    inputs.property 'mod_version', rootProject.mod_version
+
+    filesMatching('fabric.mod.json') {
+        expand mod_version: rootProject.mod_version
+    }
+}

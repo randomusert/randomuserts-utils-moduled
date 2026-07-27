@@ -6,8 +6,12 @@ import org.slf4j.LoggerFactory;
 
 
 public class LoggingHelper {
+   private static final Logger LOGGER = LoggerFactory.getLogger("randomuserts-utils");
     public static void info(String message) {
-         final Logger LOGGER = LoggerFactory.getLogger("randomuserts-utils");
         LOGGER.info("API: " + message);
+    }
+
+    public static void dbg(String msg) {
+        LOGGER.debug("API: " + msg);
     }
 }
