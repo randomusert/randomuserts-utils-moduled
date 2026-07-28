@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "io.github.randomusert.mods.randomuserts_utils.fabric.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "MainMenuAddCreateTestWorld"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
