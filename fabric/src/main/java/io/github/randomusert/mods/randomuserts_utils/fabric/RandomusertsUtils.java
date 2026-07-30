@@ -1,6 +1,7 @@
 package io.github.randomusert.mods.randomuserts_utils.fabric;
 
 import io.github.randomusert.mods.randomuserts_utils.api.LoggingHelper;
+import io.github.randomusert.mods.randomuserts_utils.api.config.ConfigManager;
 import io.github.randomusert.mods.randomuserts_utils.api.init.CreativeTabs;
 import io.github.randomusert.mods.randomuserts_utils.api.plugins.PluginManager;
 import io.github.randomusert.mods.randomuserts_utils.api.plugins.RandomusertsUtilsPlugin;
@@ -49,19 +50,24 @@ public class RandomusertsUtils implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LoggingHelper.info("Test from the Randomusert's Utils API");
+		LoggingHelper.info("Loading config");
+
+		ConfigManager.load();
+
+		LoggingHelper.info("Config loaded");
 
 		LOGGER.debug("Loading {} Randomusert's Utils plugin entrypoints", plugins.size());
 
 		FabricLoader.getInstance()
 				.getEntrypoints("rsts_utils_plugin", RandomusertsUtilsPlugin.class)
-
 				.forEach(plugin -> {
-
-					plugin.initialize();
-
 					PluginManager.register(plugin);
 
+					if (ConfigManager.getConfig().isEnabled(plugin.getId())) {
+						plugin.initialize();
+					} else {
+						LOGGER.info("Skipping disabled module '{}'.", plugin.getId());
+					}
 				});
 
 		LOGGER.debug("Found {} Plugins", plugins.size());
