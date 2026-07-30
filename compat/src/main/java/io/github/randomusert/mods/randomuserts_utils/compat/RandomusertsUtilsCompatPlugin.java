@@ -10,6 +10,10 @@ import java.util.function.Consumer;
 
 public class RandomusertsUtilsCompatPlugin implements RandomusertsUtilsPlugin {
 
+    @Override
+    public String getId() {
+        return RandomusertsUtilsCompat.MOD_ID;
+    }
 
     @Override
     public void initialize() {
