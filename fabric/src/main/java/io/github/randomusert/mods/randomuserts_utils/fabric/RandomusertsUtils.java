@@ -49,20 +49,25 @@ public class RandomusertsUtils implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
 		LoggingHelper.info("Test from the Randomusert's Utils API");
 
 		LOGGER.debug("Loading {} Randomusert's Utils plugin entrypoints", plugins.size());
 
 		FabricLoader.getInstance()
 				.getEntrypoints("rsts_utils_plugin", RandomusertsUtilsPlugin.class)
+
 				.forEach(plugin -> {
+
 					plugin.initialize();
+
 					PluginManager.register(plugin);
+
 				});
+
 		LOGGER.debug("Found {} Plugins", plugins.size());
 
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, CreativeTabs.MAIN_TAB, RANDOMUSERTS_UTILS_TAB);
+
 		LoggingHelper.info("Randomusert's Utils loaded");
 	}
 
